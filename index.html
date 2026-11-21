@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tianchi Yang — mathematics, combinatorics and graph theory.">
+  <meta name="description" content="Tianchi Yang at Georgia Institute of Technology. Research in combinatorics and graph theory.">
   <title>Tianchi Yang | Mathematics</title>
   <style>
     :root { color-scheme: light; }
     * { box-sizing: border-box; }
     body { margin: 0 auto; max-width: 880px; padding: 64px 28px 48px; color: #202124; background: #fff; font: 18px/1.7 Georgia, "Times New Roman", serif; }
-    header { margin-bottom: 44px; }
+    header { display: grid; grid-template-columns: minmax(0, 1fr) 218px; gap: 20px 34px; align-items: start; margin-bottom: 44px; }
     h1 { margin: 0; font-size: 2.4rem; line-height: 1.2; font-weight: normal; }
-    .subtitle { margin: 12px 0 18px; color: #50555a; }
+    .affiliation { margin: 12px 0 0; }
+    .institution { margin: 2px 0 0; color: #50555a; }
+    .contact { margin: 6px 0 18px; }
+    .portrait { display: block; width: 100%; height: auto; border-radius: 4px; }
     nav { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 1rem; }
     a { color: #174e8c; text-underline-offset: 3px; }
     a:hover { color: #082d56; }
@@ -22,49 +25,69 @@
     ul { padding-left: 25px; }
     .papers { list-style: none; padding-left: 0; }
     .papers li { margin: 0 0 22px; }
+    .paper-note { display: block; margin: 3px 0; }
     .paper-details { display: block; color: #50555a; }
     .paper-links { display: block; font-size: 1rem; }
     .paper-links a + a { margin-left: 12px; }
     h3 { font-size: 1.15rem; margin: 26px 0 12px; }
     footer { margin-top: 52px; padding-top: 16px; border-top: 1px solid #ddd; font-size: 1rem; }
-    @media (max-width: 560px) { body { padding: 36px 22px; } h1 { font-size: 2rem; } }
+    @media (max-width: 650px) {
+      body { padding: 36px 22px; }
+      header { grid-template-columns: 1fr; }
+      h1 { font-size: 2rem; }
+      .portrait { width: min(218px, 100%); }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Tianchi Yang</h1>
-    <p class="subtitle">Mathematics · Combinatorics and graph theory</p>
-    <nav aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#cv">CV</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#talks">Talks</a>
-    </nav>
+    <div>
+      <h1>Tianchi Yang</h1>
+      <p class="affiliation">Visiting Assistant Professor, School of Mathematics</p>
+      <p class="institution">Georgia Institute of Technology (Georgia Tech)</p>
+      <p class="contact"><a href="mailto:tyang439@gatech.edu">tyang439@gatech.edu</a></p>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#teaching">Teaching</a>
+      </nav>
+    </div>
+    <img class="portrait" src="portrait.png" width="850" height="712" alt="Tianchi Yang">
   </header>
   <main>
     <section id="about">
       <h2>About me</h2>
-      <p>I work in combinatorics and graph theory. I received my Ph.D. and B.S. in mathematics from the University of Science and Technology of China.</p>
+      <p>I work in extremal combinatorics and graph theory. Before joining Georgia Tech, I was a research fellow at the National University of Singapore, where I worked with Hao Huang. I received my Ph.D. in mathematics from the University of Science and Technology of China, advised by Jie Ma, and also completed my undergraduate degree there.</p>
     </section>
     <section id="research">
-      <h2>Research interests</h2>
+      <h2>Research</h2>
+      <p>I study how local restrictions determine the size and structure of graphs, hypergraphs, and set families. Some questions I have worked on include:</p>
       <ul>
-        <li>Extremal combinatorics and graph theory</li>
-        <li>Extremal problems on graphs, hypergraphs, and set families</li>
+        <li><strong>Cycles in graphs.</strong> How many edges can a graph have without a 4-cycle? What structure must a near-extremal graph have, and how many 4-cycles appear once the edge threshold is exceeded? <a href="#four-cycles">Related paper</a></li>
+        <li><strong>Hypergraph Turán problems.</strong> How large can a uniform hypergraph be if a specified configuration is forbidden? I have studied generalized 4-cycles and how the parity of the uniformity changes bipartite Turán problems. <a href="#generalized-cycles">Related preprint</a></li>
+        <li><strong>Coloring and critical graphs.</strong> How many colors are needed to partition the edges of a bipartite graph into induced matchings? Another direction is counting edges and critical subgraphs in graphs that are minimal with respect to their chromatic number. <a href="#strong-coloring">Related preprint</a></li>
+        <li><strong>Extremal set theory.</strong> How large can a uniform set family be if it cannot realize every trace on a set of a given size? <a href="#vc-dimension">Related preprint</a></li>
       </ul>
     </section>
     <section id="publications">
       <h2>Publications &amp; preprints</h2>
-      <h3>Preprints</h3>
+      <h3>Recent preprints</h3>
       <ul class="papers">
-        <li><strong>Extremal hypergraphs without generalized 4-cycles</strong>
+        <li id="generalized-cycles"><strong>Extremal hypergraphs without generalized 4-cycles</strong>
           <span class="paper-details">Hao Huang, Jie Ma, and Tianchi Yang · 2026</span>
+          <span class="paper-note">We prove Füredi’s conjecture on the maximum size of a uniform hypergraph in which disjoint edge pairs have distinct unions, and characterize the extremal examples.</span>
           <span class="paper-links"><a href="https://arxiv.org/abs/2609.37744">arXiv</a> <a href="https://arxiv.org/pdf/2609.37744">PDF</a></span>
         </li>
-        <li><strong>Maximum Size of a Uniform Family with Bounded VC-dimension</strong>
+        <li id="strong-coloring"><strong>Strong chromatic index of bipartite graphs</strong>
+          <span class="paper-details">Yanli Hao, Tianchi Yang, and Xingxing Yu · 2026</span>
+          <span class="paper-note">We give a new upper bound on the strong chromatic index in terms of the maximum degrees on the two sides of a bipartite graph.</span>
+          <span class="paper-links"><a href="https://arxiv.org/abs/2606.23824">arXiv</a> <a href="https://arxiv.org/pdf/2606.23824">PDF</a></span>
+        </li>
+        <li id="vc-dimension"><strong>Maximum Size of a Uniform Family with Bounded VC-dimension</strong>
           <span class="paper-details">Tianchi Yang and Xingxing Yu · 2025</span>
+          <span class="paper-note">We obtain an asymptotically tight upper bound for the Frankl–Pach problem on uniform families of bounded VC-dimension.</span>
           <span class="paper-links"><a href="https://arxiv.org/abs/2508.14334">arXiv</a> <a href="https://arxiv.org/pdf/2508.14334">PDF</a></span>
         </li>
       </ul>
@@ -85,7 +108,7 @@
           <span class="paper-details"><cite>Bulletin of the London Mathematical Society</cite> 55 (2023), 1655–1667.</span>
           <span class="paper-links"><a href="https://arxiv.org/abs/2107.11601">arXiv</a> <a href="https://arxiv.org/pdf/2107.11601">PDF</a></span>
         </li>
-        <li><strong>Some exact results on 4-cycles: stability and supersaturation</strong>
+        <li id="four-cycles"><strong>Some exact results on 4-cycles: stability and supersaturation</strong>
           <span class="paper-details">Jialin He, Jie Ma, and Tianchi Yang</span>
           <span class="paper-details"><cite>CSIAM Transactions on Applied Mathematics</cite> 4 (2023), 74–128.</span>
           <span class="paper-links"><a href="https://doi.org/10.4208/csiam-am.SO-2021-0006">Journal</a> <a href="https://arxiv.org/pdf/1912.00986">PDF</a></span>
@@ -134,22 +157,6 @@
         <li>Fall 2020 · Combinatorics (undergraduate), teaching assistant.</li>
         <li>Spring 2020 · Extremal and Probabilistic Graph Theory (graduate), teaching assistant.</li>
         <li>Spring 2018 and Spring 2019 · Mathematical Analysis (A2) (undergraduate), teaching assistant.</li>
-      </ul>
-    </section>
-    <section id="talks">
-      <h2>Talks &amp; conferences</h2>
-      <ul>
-        <li>June 2025 · Frontiers in Combinatorics and Theoretical Computer Science, Hangzhou.</li>
-        <li>March 2025 · AMS meeting, Clemson University.</li>
-        <li>November 2024 · Combinatorics conference, National University of Singapore.</li>
-        <li>August 2023 · ICIAM 2023, Waseda University.</li>
-        <li>April 2023 · IBS Extremal Combinatorics and Probability Group.</li>
-        <li>November 2021 · Sixth Workshop on Graph Theory and Combinatorics, Shanghai Jiao Tong University.</li>
-        <li>May 2021 · International Workshop on Optimization Methods and Combinatorial Algorithms, Lanzhou University.</li>
-        <li>August 2020 · Ninth National Conference on Combinatorics and Graph Theory (online).</li>
-        <li>July 2019 · Summer Course on Extremal Combinatorics, Shandong University.</li>
-        <li>December 2018 · SCMS Workshop on Extremal and Structural Graph Theory, Fudan University.</li>
-        <li>August 2018 · Eighth National Conference on Combinatorics and Graph Theory, Hefei.</li>
       </ul>
     </section>
   </main>
