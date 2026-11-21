@@ -11,12 +11,24 @@ async function loadContainerProofs() {
     const visible = list.dataset.limit ? proofs.slice(0, Number(list.dataset.limit)) : proofs;
     if (visible.length === 0) return;
 
-    const items = document.createDocumentFragment();
+    const existingItems = new Map();
+    for (const item of list.children) {
+      const link = item.querySelector('a[href]');
+      if (link) existingItems.set(link.href, item);
+    }
+
+    const items = [];
     for (const proof of visible) {
       const url = new URL(proof.url, window.location.href);
       if (url.protocol !== 'https:' && url.origin !== window.location.origin) {
         throw new Error('Manuscript links must use HTTPS or point to this site.');
       }
+      const existingItem = existingItems.get(url.href);
+      if (existingItem) {
+        items.push(existingItem);
+        continue;
+      }
+
       const link = document.createElement('a');
       link.href = url.href;
       link.textContent = proof.title;
@@ -28,13 +40,14 @@ async function loadContainerProofs() {
 
       const item = document.createElement('li');
       item.append(link, date);
-      items.append(item);
+      items.push(item);
     }
-    list.append(items);
+    list.replaceChildren(...items);
     list.hidden = false;
     status.hidden = true;
   } catch {
     status.textContent = 'The manuscript list could not be loaded. Please try again later.';
+    status.hidden = false;
   }
 }
 
