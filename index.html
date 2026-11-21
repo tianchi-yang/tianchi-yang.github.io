@@ -12,8 +12,7 @@
     header { margin-bottom: 44px; }
     h1 { margin: 0; font-size: 2.4rem; line-height: 1.2; font-weight: normal; }
     .subtitle { margin: 12px 0 18px; color: #50555a; }
-    nav { font-size: 1rem; }
-    nav a { margin-right: 20px; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 1rem; }
     a { color: #174e8c; text-underline-offset: 3px; }
     a:hover { color: #082d56; }
     a:focus-visible { outline: 2px solid #174e8c; outline-offset: 4px; }
@@ -21,8 +20,14 @@
     h2 { margin: 0 0 12px; border-bottom: 1px solid #ddd; padding-bottom: 8px; font-size: 1.45rem; font-weight: normal; }
     p { margin: 12px 0; }
     ul { padding-left: 25px; }
+    .papers { list-style: none; padding-left: 0; }
+    .papers li { margin: 0 0 22px; }
+    .paper-details { display: block; color: #50555a; }
+    .paper-links { display: block; font-size: 1rem; }
+    .paper-links a + a { margin-left: 12px; }
+    h3 { font-size: 1.15rem; margin: 26px 0 12px; }
     footer { margin-top: 52px; padding-top: 16px; border-top: 1px solid #ddd; font-size: 1rem; }
-    @media (max-width: 560px) { body { padding: 36px 22px; } h1 { font-size: 2rem; } nav a { display: inline-block; margin-bottom: 8px; } }
+    @media (max-width: 560px) { body { padding: 36px 22px; } h1 { font-size: 2rem; } }
   </style>
 </head>
 <body>
@@ -33,23 +38,119 @@
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
+      <a href="#cv">CV</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#talks">Talks</a>
     </nav>
   </header>
   <main>
     <section id="about">
       <h2>About me</h2>
-      <p>My research interests are in combinatorics and graph theory.</p>
+      <p>I work in combinatorics and graph theory. I received my Ph.D. and B.S. in mathematics from the University of Science and Technology of China.</p>
     </section>
     <section id="research">
       <h2>Research interests</h2>
       <ul>
-        <li>Combinatorics</li>
-        <li>Graph theory</li>
+        <li>Extremal combinatorics and graph theory</li>
+        <li>Extremal problems on graphs, hypergraphs, and set families</li>
       </ul>
     </section>
     <section id="publications">
       <h2>Publications &amp; preprints</h2>
-      <p>Publications and preprints will be added here.</p>
+      <h3>Preprints</h3>
+      <ul class="papers">
+        <li><strong>Extremal hypergraphs without generalized 4-cycles</strong>
+          <span class="paper-details">Hao Huang, Jie Ma, and Tianchi Yang · 2026</span>
+          <span class="paper-links"><a href="https://arxiv.org/abs/2609.37744">arXiv</a> <a href="https://arxiv.org/pdf/2609.37744">PDF</a></span>
+        </li>
+        <li><strong>Maximum Size of a Uniform Family with Bounded VC-dimension</strong>
+          <span class="paper-details">Tianchi Yang and Xingxing Yu · 2025</span>
+          <span class="paper-links"><a href="https://arxiv.org/abs/2508.14334">arXiv</a> <a href="https://arxiv.org/pdf/2508.14334">PDF</a></span>
+        </li>
+      </ul>
+      <h3>Journal articles</h3>
+      <ul class="papers">
+        <li><strong>A Hypergraph Bipartite Turán Problem with Odd Uniformity</strong>
+          <span class="paper-details">Jie Ma and Tianchi Yang</span>
+          <span class="paper-details"><cite>Combinatorica</cite> 45, article 21 (2025).</span>
+          <span class="paper-links"><a href="https://doi.org/10.1007/s00493-025-00146-2">Journal</a> <a href="https://arxiv.org/pdf/2403.04318">PDF</a></span>
+        </li>
+        <li><strong>On the maximum number of edges in <i>k</i>-critical graphs</strong>
+          <span class="paper-details">Cong Luo, Jie Ma, and Tianchi Yang</span>
+          <span class="paper-details"><cite>Combinatorics, Probability and Computing</cite> 32 (2023), 900–911.</span>
+          <span class="paper-links"><a href="https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/on-the-maximum-number-of-edges-in-kcritical-graphs/9D540DEE2EE90A8D99963128E8250BCC">Journal</a> <a href="https://arxiv.org/pdf/2301.01656">PDF</a></span>
+        </li>
+        <li><strong>Upper bounds on the extremal number of the 4-cycle</strong>
+          <span class="paper-details">Jie Ma and Tianchi Yang</span>
+          <span class="paper-details"><cite>Bulletin of the London Mathematical Society</cite> 55 (2023), 1655–1667.</span>
+          <span class="paper-links"><a href="https://arxiv.org/abs/2107.11601">arXiv</a> <a href="https://arxiv.org/pdf/2107.11601">PDF</a></span>
+        </li>
+        <li><strong>Some exact results on 4-cycles: stability and supersaturation</strong>
+          <span class="paper-details">Jialin He, Jie Ma, and Tianchi Yang</span>
+          <span class="paper-details"><cite>CSIAM Transactions on Applied Mathematics</cite> 4 (2023), 74–128.</span>
+          <span class="paper-links"><a href="https://doi.org/10.4208/csiam-am.SO-2021-0006">Journal</a> <a href="https://arxiv.org/pdf/1912.00986">PDF</a></span>
+        </li>
+        <li><strong>Non-repeated cycle lengths and Sidon sequences</strong>
+          <span class="paper-details">Jie Ma and Tianchi Yang</span>
+          <span class="paper-details"><cite>Israel Journal of Mathematics</cite> 245 (2021), 639–674.</span>
+          <span class="paper-links"><a href="https://arxiv.org/abs/2007.12513">arXiv</a> <a href="https://arxiv.org/pdf/2007.12513">PDF</a></span>
+        </li>
+        <li><strong>Counting critical subgraphs in <i>k</i>-critical graphs</strong>
+          <span class="paper-details">Jie Ma and Tianchi Yang</span>
+          <span class="paper-details"><cite>Combinatorica</cite> 41 (2021), 669–694.</span>
+          <span class="paper-links"><a href="https://arxiv.org/abs/1906.09598">arXiv</a> <a href="https://arxiv.org/pdf/1906.09598">PDF</a></span>
+        </li>
+        <li><strong>Some extremal results on 4-cycles</strong>
+          <span class="paper-details">Jialin He, Jie Ma, and Tianchi Yang</span>
+          <span class="paper-details"><cite>Journal of Combinatorial Theory, Series B</cite> 149 (2021), 92–108.</span>
+          <span class="paper-links"><a href="https://doi.org/10.1016/j.jctb.2021.01.007">Journal</a> <a href="https://raw.githubusercontent.com/tianchi-yang/Tianchi8.github.io/master/files/c4-turan.pdf">PDF</a></span>
+        </li>
+        <li><strong>Decomposing C<sub>4</sub>-free graphs under degree constraints</strong>
+          <span class="paper-details">Jie Ma and Tianchi Yang</span>
+          <span class="paper-details"><cite>Journal of Graph Theory</cite> 90 (2019), 13–23.</span>
+          <span class="paper-links"><a href="https://arxiv.org/abs/1706.07292">arXiv</a> <a href="https://arxiv.org/pdf/1706.07292">PDF</a></span>
+        </li>
+      </ul>
+    </section>
+    <section id="cv">
+      <h2>Curriculum vitae</h2>
+      <h3>Academic appointments</h3>
+      <ul>
+        <li>Visiting Assistant Professor, School of Mathematics, Georgia Institute of Technology (appointment began in 2024).</li>
+        <li>Research Fellow, Department of Mathematics, National University of Singapore (2022–2024).</li>
+      </ul>
+      <h3>Education</h3>
+      <ul>
+        <li>Ph.D. in Mathematics, School of Mathematics, University of Science and Technology of China (2017–2022).</li>
+        <li>B.S. in Mathematics, School of the Gifted Young, University of Science and Technology of China (2013–2017).</li>
+      </ul>
+    </section>
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <h3>Georgia Institute of Technology</h3>
+      <ul><li>Spring 2025 · Applied Combinatorics (MATH 3012), instructor.</li></ul>
+      <h3>University of Science and Technology of China</h3>
+      <ul>
+        <li>Fall 2020 · Combinatorics (undergraduate), teaching assistant.</li>
+        <li>Spring 2020 · Extremal and Probabilistic Graph Theory (graduate), teaching assistant.</li>
+        <li>Spring 2018 and Spring 2019 · Mathematical Analysis (A2) (undergraduate), teaching assistant.</li>
+      </ul>
+    </section>
+    <section id="talks">
+      <h2>Talks &amp; conferences</h2>
+      <ul>
+        <li>June 2025 · Frontiers in Combinatorics and Theoretical Computer Science, Hangzhou.</li>
+        <li>March 2025 · AMS meeting, Clemson University.</li>
+        <li>November 2024 · Combinatorics conference, National University of Singapore.</li>
+        <li>August 2023 · ICIAM 2023, Waseda University.</li>
+        <li>April 2023 · IBS Extremal Combinatorics and Probability Group.</li>
+        <li>November 2021 · Sixth Workshop on Graph Theory and Combinatorics, Shanghai Jiao Tong University.</li>
+        <li>May 2021 · International Workshop on Optimization Methods and Combinatorial Algorithms, Lanzhou University.</li>
+        <li>August 2020 · Ninth National Conference on Combinatorics and Graph Theory (online).</li>
+        <li>July 2019 · Summer Course on Extremal Combinatorics, Shandong University.</li>
+        <li>December 2018 · SCMS Workshop on Extremal and Structural Graph Theory, Fudan University.</li>
+        <li>August 2018 · Eighth National Conference on Combinatorics and Graph Theory, Hefei.</li>
+      </ul>
     </section>
   </main>
   <footer><a href="https://github.com/tianchi-yang">GitHub</a></footer>
