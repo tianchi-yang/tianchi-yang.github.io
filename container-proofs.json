@@ -1,5 +1,10 @@
 [
   {
+    "title": "Hypergraph containers with deferred constraints",
+    "date": "2026-11-28",
+    "url": "papers/hypergraph-containers-with-deferred-constraints.pdf"
+  },
+  {
     "title": "The number of C₄-free graphs",
     "date": "2026-10-29",
     "url": "https://arxiv.org/abs/2610.39595"
